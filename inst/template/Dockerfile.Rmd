@@ -2,8 +2,7 @@ FROM `r liftr_from`
 
 MAINTAINER `r liftr_maintainer` <`r liftr_maintainer_email`>
 
-RUN  rm -f /var/lib/dpkg/available \
-  && rm -rf  /var/cache/apt/* \
+RUN  rm -rf  /var/cache/apt/* \
   && apt-get update \
   && apt-get install  -y --no-install-recommends \
     ca-certificates \
